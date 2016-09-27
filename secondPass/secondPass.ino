@@ -5,10 +5,12 @@
  */
 
 #include <stdlib.h>
-// #include <Servo.h>
+#include <Servo.h>
 
-// Servo tiltServo;  // create servo object to control a servo
-// Servo panServo;   // a maximum of eight servo objects can be created
+// create servo object to control a servo
+// a maximum of eight servo objects can be created
+Servo servoLeft;  // left of the irSensor facing forward
+Servo servoRight; // right of the irSensor facing forward
 
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
@@ -22,9 +24,10 @@ void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(19200);
-  // tiltServo.attach(8);  // attaches the servo on pin 8 to the servo object
-  // panServo.attach(9);  // attaches the servo on pin 9 to the servo object
-  // tiltServo.write(80);
+  servoLeft.attach(8);  // attaches the servo on pin 8 to the servo object
+  servoRight.attach(9);  // attaches the servo on pin 9 to the servo object
+  servoLeft.write(90);
+  servoRight.write(90);
 }
 
 void loop()
@@ -43,7 +46,7 @@ void loop()
     irSensorRead();
 
     // move servos to next position
-
+    getNextPos();
 
     // package serial data
     printSerialData();
@@ -67,12 +70,18 @@ int irSensorRead()
   return (irValue/5);
 }
 
-// void getNextPos()
-// {
-//   static int panServoPos = 0;
-//   static int tiltServoPos = 0;
-// }
-//
+void getNextPos()
+{
+  // getNextPos moves the servos to their next position. For now, just test
+  // moving them
+  static int servoLeftPos = 90;
+  static int servoRightPos = 90;
+
+  servoLeft.write(random(10,170));
+  servoRight.write(random(10,170));
+
+}
+
 
 void printSerialData()
 {
