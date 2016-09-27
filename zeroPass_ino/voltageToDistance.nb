@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41616,        958]
-NotebookOptionsPosition[     39730,        888]
-NotebookOutlinePosition[     40056,        903]
-CellTagsIndexPosition[     40013,        900]
+NotebookDataLength[     42848,        985]
+NotebookOptionsPosition[     40845,        911]
+NotebookOutlinePosition[     41172,        926]
+CellTagsIndexPosition[     41129,        923]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -76,7 +76,7 @@ Cell[BoxData[
    3.683366293617731*^9, {3.683366328715435*^9, 3.683366335518475*^9}, 
    3.683366721693606*^9, {3.683902282846643*^9, 3.683902307825914*^9}, {
    3.683902582452379*^9, 3.6839027500830927`*^9}, 3.683903513733232*^9, 
-   3.683903887562367*^9, 3.68390392560872*^9}],
+   3.683903887562367*^9, 3.68390392560872*^9, 3.683970346157509*^9}],
 
 Cell[BoxData[
  RowBox[{"230.1430411867322`", "\[VeryThinSpace]", "-", 
@@ -90,7 +90,7 @@ Cell[BoxData[
    3.683366293617731*^9, {3.683366328715435*^9, 3.683366335518475*^9}, 
    3.683366721693606*^9, {3.683902282846643*^9, 3.683902307825914*^9}, {
    3.683902582452379*^9, 3.6839027500830927`*^9}, 3.683903513733232*^9, 
-   3.683903887562367*^9, 3.683903925645804*^9}]
+   3.683903887562367*^9, 3.68390392560872*^9, 3.683970346188656*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -234,7 +234,8 @@ Ew==
      Scaled[0.05], 
      Scaled[0.05]}},
   Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.683903516071151*^9, 3.6839035310700493`*^9}}]
+ CellChangeTimes->{{3.683903516071151*^9, 3.6839035310700493`*^9}, 
+   3.683970346360786*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -260,7 +261,7 @@ Cell[BoxData[
   RowBox[{"2.9360497052173657`*^-6", " ", 
    SuperscriptBox["x", "3"]}]}]], "Output",
  CellChangeTimes->{{3.683904069784881*^9, 3.6839040825189953`*^9}, 
-   3.6839041150706863`*^9}]
+   3.6839041150706863`*^9, 3.68397034647259*^9, 3.683973434389216*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -364,7 +365,7 @@ JQs=
   Ticks->{Automatic, Automatic}]], "Output",
  CellChangeTimes->{{3.6833662786133966`*^9, 3.683366302349152*^9}, 
    3.683366343669425*^9, {3.683366503612677*^9, 3.683366636316135*^9}, 
-   3.683366723496305*^9}]
+   3.683366723496305*^9, 3.683970346741193*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -374,7 +375,7 @@ Cell[BoxData[
   RowBox[{"DeviceOpen", "[", 
    RowBox[{"\"\<Serial\>\"", ",", 
     RowBox[{"{", 
-     RowBox[{"\"\</dev/ttyUSB0\>\"", ",", 
+     RowBox[{"\"\</dev/ttyUSB1\>\"", ",", 
       RowBox[{"\"\<BaudRate\>\"", "\[Rule]", "19200"}]}], "}"}]}], 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.683366967035421*^9, 3.6833670229287157`*^9}, {
@@ -383,25 +384,7 @@ Cell[BoxData[
   3.683369879320653*^9, 3.683369879454358*^9}, {3.683369914695787*^9, 
   3.683369916101098*^9}, {3.6833701594339533`*^9, 3.68337015955385*^9}, {
   3.683370791570573*^9, 3.683370791812965*^9}, {3.683370863275147*^9, 
-  3.683370938506722*^9}}],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","cdir",
-   "\"Cannot set current directory to \
-\\!\\(\\*RowBox[{\\\"\\\\\\\".dbus\\\\\\\"\\\"}]\\).\"",2,1,2,
-   20717196743258439466,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683901969512444*^9}],
-
-Cell[BoxData[
- TemplateBox[{
-  "General","cdir",
-   "\"Cannot set current directory to \
-\\!\\(\\*RowBox[{\\\"\\\\\\\".dbus\\\\\\\"\\\"}]\\).\"",2,1,3,
-   20717196743258439466,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.683901969544744*^9}],
+  3.683370938506722*^9}, {3.683973423462914*^9, 3.683973423546906*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -517,7 +500,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
+               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$ = 1, 
                Devices`DeviceAPI`DeviceDump`indr$$ = 1}, 
@@ -662,7 +645,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
+               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$, 
                Devices`DeviceAPI`DeviceDump`indr$$}, 
@@ -752,7 +735,9 @@ Cell[BoxData[
    3.683370806461913*^9}, {3.68337092275086*^9, 3.6833709392138567`*^9}, {
    3.6836252234700603`*^9, 3.6836252364340487`*^9}, 3.6836281406133757`*^9, 
    3.6836290821198053`*^9, 3.683629528387824*^9, {3.683630193512723*^9, 
-   3.683630210651704*^9}, 3.683630497631908*^9, 3.683901969723695*^9}]
+   3.683630210651704*^9}, 3.683630497631908*^9, 3.683901969723695*^9, 
+   3.6839703470593*^9, 3.683970393936681*^9, {3.68397340923071*^9, 
+   3.683973425671376*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -768,16 +753,16 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "55", ",", "13", ",", "10", ",", "55", ",", "13", ",", "10", ",", "54", ",",
-    "13", ",", "10", ",", "55", ",", "13", ",", "10", ",", "48", ",", "13", 
-   ",", "10", ",", "54", ",", "13", ",", "10", ",", "49", ",", "53", ",", 
-   "13", ",", "10", ",", "52", ",", "13", ",", "10", ",", "51", ",", "13", 
-   ",", "10", ",", "51", ",", "13", ",", "10", ",", "51", ",", "13", ",", 
-   "10", ",", "51", ",", "13", ",", "10", ",", "51", ",", "13", ",", "10", 
-   ",", "52", ",", "13", ",", "10", ",", "48", ",", "13", ",", "10", ",", 
-   "52", ",", "13", ",", "10", ",", "51"}], "}"}]], "Output",
+  "51", ",", "50", ",", "55", ",", "13", ",", "10", ",", "51", ",", "51", ",",
+    "51", ",", "13", ",", "10", ",", "51", ",", "48", ",", "54", ",", "13", 
+   ",", "10", ",", "50", ",", "55", ",", "48", ",", "13", ",", "10", ",", 
+   "50", ",", "53", ",", "54", ",", "13", ",", "10", ",", "50", ",", "56", 
+   ",", "48", ",", "13", ",", "10", ",", "51", ",", "49", ",", "56", ",", 
+   "13", ",", "10", ",", "51", ",", "52", ",", "49", ",", "13", ",", "10", 
+   ",", "51", ",", "50", ",", "53", ",", "13", ",", "10", ",", "50", ",", 
+   "56", ",", "54", ",", "13", ",", "10"}], "}"}]], "Output",
  CellChangeTimes->{3.683630356320116*^9, 3.683901972780938*^9, 
-  3.683903857545402*^9}]
+  3.683903857545402*^9, 3.683970347350795*^9, 3.683970396379973*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -813,7 +798,8 @@ Cell[BoxData[
  CellChangeTimes->{
   3.683903408068491*^9, {3.683903467430447*^9, 3.683903483109063*^9}, {
    3.6839036205988903`*^9, 3.683903647328785*^9}, {3.6839037893709383`*^9, 
-   3.683903850687633*^9}, 3.683904122552997*^9}]
+   3.683903850687633*^9}, 3.683904122552997*^9, 3.683970347502178*^9, {
+   3.6839734296924953`*^9, 3.6839734375150557`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -825,7 +811,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.6839034435642138`*^9, 3.6839034503015137`*^9}}],
 
 Cell[BoxData["\<\"234\"\>"], "Output",
- CellChangeTimes->{3.683903451182872*^9}]
+ CellChangeTimes->{3.683903451182872*^9, 3.683970347650931*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -835,7 +821,7 @@ Cell[BoxData[
  NumberMarks->False],
 
 Cell[BoxData["234"], "Output",
- CellChangeTimes->{3.683903454168507*^9}]
+ CellChangeTimes->{3.683903454168507*^9, 3.683970347765761*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -843,8 +829,14 @@ Cell[CellGroupData[{
 Cell[BoxData["line"], "Input",
  CellChangeTimes->{{3.6839022779082937`*^9, 3.683902278345479*^9}}],
 
-Cell[BoxData["line"], "Output",
- CellChangeTimes->{3.683902278859639*^9}]
+Cell[BoxData[
+ RowBox[{"782.773655435025`", "\[VeryThinSpace]", "-", 
+  RowBox[{"15.940842043846224`", " ", "x"}], "+", 
+  RowBox[{"0.1280328616787102`", " ", 
+   SuperscriptBox["x", "2"]}], "-", 
+  RowBox[{"0.00035637946296768734`", " ", 
+   SuperscriptBox["x", "3"]}]}]], "Output",
+ CellChangeTimes->{3.683902278859639*^9, 3.683970347878154*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -856,9 +848,16 @@ Cell[BoxData[
   3.683629167745246*^9, 3.6836291678983192`*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"53", ",", "51", ",", "48", ",", "51"}], "}"}]], "Output",
- CellChangeTimes->{3.683625555300495*^9, 3.683629168551605*^9}]
+ TemplateBox[{
+  "DeviceReadBuffer","ncdev",
+   "\"\\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\) is not open.\"",2,18,26,
+   20717645141167274043,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6839703480029716`*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.683625555300495*^9, 3.683629168551605*^9, 
+  3.683970348036408*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -868,8 +867,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.68362564307732*^9, 3.683625649628356*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", "}"}]], "Output",
- CellChangeTimes->{3.683625649932165*^9}]
+ RowBox[{"$Failed", "[", "\<\"Properties\"\>", "]"}]], "Output",
+ CellChangeTimes->{3.683625649932165*^9, 3.683970348154171*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -878,15 +877,39 @@ Cell[BoxData[
  RowBox[{"DeviceReadLatest", "[", "serial", "]"}]], "Input",
  CellChangeTimes->{{3.6836256950239677`*^9, 3.683625718663095*^9}}],
 
-Cell[BoxData["52"], "Output",
- CellChangeTimes->{{3.683625699607654*^9, 3.683625723653016*^9}}]
+Cell[BoxData[
+ TemplateBox[{
+  "DeviceReadLatest","ncdev",
+   "\"\\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\) is not open.\"",2,20,33,
+   20717645141167274043,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.68397034834135*^9}],
+
+Cell[BoxData[
+ RowBox[{"DeviceReadLatest", "[", "$Failed", "]"}]], "Output",
+ CellChangeTimes->{{3.683625699607654*^9, 3.683625723653016*^9}, 
+   3.6839703483777437`*^9}]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"DeviceClose", "[", "serial", "]"}]], "Input",
- CellChangeTimes->{{3.6836259586568613`*^9, 3.6836259625465393`*^9}}]
+ CellChangeTimes->{{3.6836259586568613`*^9, 3.6836259625465393`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeviceClose","ncdev",
+   "\"\\!\\(\\*RowBox[{\\\"$Failed\\\"}]\\) is not open.\"",2,21,37,
+   20717645141167274043,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.6839703484968433`*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.683970348533156*^9}]
+}, Open  ]]
 },
-WindowSize->{956, 1041},
+WindowSize->{1916, 1041},
 WindowMargins->{{2, Automatic}, {2, 37}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
@@ -902,64 +925,68 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 666, 18, 103, "Input"],
+Cell[558, 20, 666, 18, 59, "Input"],
 Cell[CellGroupData[{
 Cell[1249, 42, 975, 22, 74, "Input"],
-Cell[2227, 66, 684, 12, 34, "Output"],
-Cell[2914, 80, 689, 12, 34, "Output"]
+Cell[2227, 66, 706, 12, 34, "Output"],
+Cell[2936, 80, 710, 12, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3640, 97, 498, 12, 42, "Input"],
-Cell[4141, 111, 6824, 125, 228, "Output"]
+Cell[3683, 97, 498, 12, 42, "Input"],
+Cell[4184, 111, 6850, 126, 228, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11002, 241, 505, 11, 64, "Input"],
-Cell[11510, 254, 383, 8, 34, "Output"]
+Cell[11071, 242, 505, 11, 42, "Input"],
+Cell[11579, 255, 426, 8, 91, "Output"]
 }, Open  ]],
-Cell[11908, 265, 1157, 31, 59, "Input"],
+Cell[12020, 266, 1157, 31, 59, "Input"],
 Cell[CellGroupData[{
-Cell[13090, 300, 211, 4, 35, "Input"],
-Cell[13304, 306, 2961, 60, 243, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16302, 371, 709, 14, 35, "Input"],
-Cell[17014, 387, 268, 7, 23, "Message"],
-Cell[17285, 396, 268, 7, 23, "Message"],
-Cell[17556, 405, 17625, 349, 65, "Output"]
+Cell[13202, 301, 211, 4, 35, "Input"],
+Cell[13416, 307, 2983, 60, 243, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35218, 759, 359, 6, 35, "Input"],
-Cell[35580, 767, 723, 12, 52, "Output"]
+Cell[16436, 372, 755, 14, 35, "Input"],
+Cell[17194, 388, 17720, 351, 65, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36340, 784, 1061, 18, 59, "Input"],
-Cell[37404, 804, 467, 11, 30, "Output"]
+Cell[34951, 744, 359, 6, 35, "Input"],
+Cell[35313, 752, 767, 12, 32, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37908, 820, 200, 4, 32, "Input"],
-Cell[38111, 826, 80, 1, 30, "Output"]
+Cell[36117, 769, 1061, 18, 35, "Input"],
+Cell[37181, 789, 543, 12, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38228, 832, 96, 2, 32, "Input"],
-Cell[38327, 836, 72, 1, 30, "Output"]
+Cell[37761, 806, 200, 4, 32, "Input"],
+Cell[37964, 812, 102, 1, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38436, 842, 98, 1, 30, "Input"],
-Cell[38537, 845, 73, 1, 30, "Output"]
+Cell[38103, 818, 96, 2, 32, "Input"],
+Cell[38202, 822, 94, 1, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38647, 851, 216, 4, 35, "Input"],
-Cell[38866, 857, 161, 3, 32, "Output"]
+Cell[38333, 828, 98, 1, 30, "Input"],
+Cell[38434, 831, 347, 7, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39064, 865, 141, 2, 35, "Input"],
-Cell[39208, 869, 87, 2, 32, "Output"]
+Cell[38818, 843, 216, 4, 35, "Input"],
+Cell[39037, 849, 246, 6, 23, "Message"],
+Cell[39286, 857, 123, 2, 30, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[39332, 876, 142, 2, 35, "Input"],
-Cell[39477, 880, 95, 1, 30, "Output"]
+Cell[39446, 864, 141, 2, 35, "Input"],
+Cell[39590, 868, 142, 2, 32, "Output"]
 }, Open  ]],
-Cell[39587, 884, 139, 2, 35, "Input"]
+Cell[CellGroupData[{
+Cell[39769, 875, 142, 2, 35, "Input"],
+Cell[39914, 879, 243, 6, 23, "Message"],
+Cell[40160, 887, 170, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40367, 895, 139, 2, 35, "Input"],
+Cell[40509, 899, 241, 6, 23, "Message"],
+Cell[40753, 907, 76, 1, 30, "Output"]
+}, Open  ]]
 }
 ]
 *)
