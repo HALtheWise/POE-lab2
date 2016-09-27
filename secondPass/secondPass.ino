@@ -5,12 +5,13 @@
  */
 
 #include <stdlib.h>
+// #include <Servo.h>
 
 // Servo tiltServo;  // create servo object to control a servo
-//                   // a maximum of eight servo objects can be created
-// Servo panServo;
+// Servo panServo;   // a maximum of eight servo objects can be created
 
 int irSensor = 0; // ir sensor pin
+int irValue = 0;
 
 // time related
 unsigned long interval = 1000;
@@ -20,7 +21,7 @@ unsigned long prev_time = 0;
 void setup()
 {
   // put your setup code here, to run once:
-  // Serial.begin(19200);
+  Serial.begin(19200);
   // tiltServo.attach(8);  // attaches the servo on pin 8 to the servo object
   // panServo.attach(9);  // attaches the servo on pin 9 to the servo object
   // tiltServo.write(80);
@@ -38,42 +39,44 @@ void loop()
     // start next timer
     prev_time = time;
 
-    // define local variables
-    int irValue = 0;
-
     // save current irSensor value
-    irValue = irSensorRead();
+    irSensorRead();
 
     // move servos to next position
 
 
-    // package serial buffer
-    int i = 0
-    char buffer [50];
-    i = sprintf (buffer, "%d, %d, %d", irValue, irValue, irValue);
-    for(int l= 0; l<=i; l++)
-    {
-      Serial.print(buffer[l]);
-    }
-    Serial.print("\n");
+    // package serial data
+    printSerialData();
   }
 }
 
 int irSensorRead()
 {
-  // irSensorRead reads the sensor 5 times and
-  int irValue = 0;
+  // irSensorRead reads the sensor 5 times and returns the average
 
+  // reset value of irValue
+  irValue = 0;
+
+  // read from the irSensor 5 times
   for (int i = 0; i < 5; i++)
   {
     irValue += analogRead(irSensor);
   }
 
+  // return value of irValue / 5 to average the readings
   return (irValue/5);
 }
 
-void getNextPos()
+// void getNextPos()
+// {
+//   static int panServoPos = 0;
+//   static int tiltServoPos = 0;
+// }
+//
+
+void printSerialData()
 {
-  static int panServoPos = 0;
-  static int tiltServoPos = 0;
+  // printSerialData prints the positions of the servos and the irValue followed
+  // by a new line
+  Serial.println(irValue);
 }
