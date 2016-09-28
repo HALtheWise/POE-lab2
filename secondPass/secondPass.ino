@@ -10,13 +10,15 @@
 // create servo object to control a servo
 // a maximum of eight servo objects can be created
 Servo servoLeft;  // left of the irSensor facing forward
+int servoLeftPos = 90;
 Servo servoRight; // right of the irSensor facing forward
+int servoRightPos = 90;
 
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
 
 // time related
-unsigned long interval = 1000;
+unsigned long interval = 500;
 unsigned long time;
 unsigned long prev_time = 0;
 
@@ -24,10 +26,11 @@ void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(19200);
-  servoLeft.attach(8);  // attaches the servo on pin 8 to the servo object
-  servoRight.attach(9);  // attaches the servo on pin 9 to the servo object
-  servoLeft.write(90);
-  servoRight.write(90);
+  Serial.println("Starting Setup");
+  servoLeft.attach(31);  // attaches the left servo on pin 31 to the servo object
+  servoRight.attach(33);  // attaches the right servo on pin 33 to the servo object
+  servoLeft.write(servoLeftPos);
+  servoRight.write(servoRightPos);
 }
 
 void loop()
@@ -45,15 +48,15 @@ void loop()
     // save current irSensor value
     irSensorRead();
 
-    // move servos to next position
-    getNextPos();
-
     // package serial data
     printSerialData();
+
+    // move servos to next position
+    moveNextPos();
   }
 }
 
-int irSensorRead()
+void irSensorRead()
 {
   // irSensorRead reads the sensor 5 times and returns the average
 
@@ -66,19 +69,22 @@ int irSensorRead()
     irValue += analogRead(irSensor);
   }
 
-  // return value of irValue / 5 to average the readings
-  return (irValue/5);
+  // divide the value of irValue by 5 to find the average
+
+  irValue = irValue / 5;
 }
 
-void getNextPos()
+void moveNextPos()
 {
-  // getNextPos moves the servos to their next position. For now, just test
-  // moving them
-  static int servoLeftPos = 90;
-  static int servoRightPos = 90;
+  // getNextPos moves the servos to a random location between -30 and +30
+  // degrees. Our default position is 90 degrees so we can use relative angles
+  // to make our math easier
 
-  servoLeft.write(random(10,170));
-  servoRight.write(random(10,170));
+  servoLeftPos = random(-30,30);
+  servoRightPos = random(-30,30);
+
+  servoLeft.write(servoLeftPos + 90);
+  servoRight.write(-servoRightPos + 90 + 3); //+3 is temp as servo offset
 
 }
 
@@ -87,5 +93,9 @@ void printSerialData()
 {
   // printSerialData prints the positions of the servos and the irValue followed
   // by a new line
-  Serial.println(irValue);
+  Serial.print(servoLeftPos); // pan
+  Serial.print(",");
+  Serial.print(servoRightPos); // tilt
+  Serial.print(",");
+  Serial.println(irValue); // irValue
 }
