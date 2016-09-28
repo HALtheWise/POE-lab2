@@ -10,9 +10,9 @@
 // create servo object to control a servo
 // a maximum of eight servo objects can be created
 Servo servoLeft;  // left of the irSensor facing forward
-int servoLeftPos = 90;
+int servoLeftPos = 0;
 Servo servoRight; // right of the irSensor facing forward
-int servoRightPos = 90;
+int servoRightPos = 0;
 
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
@@ -26,11 +26,8 @@ void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(19200);
-  Serial.println("Starting Setup");
   servoLeft.attach(31);  // attaches the left servo on pin 31 to the servo object
   servoRight.attach(33);  // attaches the right servo on pin 33 to the servo object
-  servoLeft.write(servoLeftPos);
-  servoRight.write(servoRightPos);
 }
 
 void loop()
@@ -80,8 +77,8 @@ void moveNextPos()
   // degrees. Our default position is 90 degrees so we can use relative angles
   // to make our math easier
 
-  servoLeftPos = random(-30,30);
-  servoRightPos = random(-30,30);
+  servoLeftPos = random(-15,15);
+  servoRightPos = random(-15,15);
 
   servoLeft.write(servoLeftPos + 90);
   servoRight.write(-servoRightPos + 90 + 3); //+3 is temp as servo offset
