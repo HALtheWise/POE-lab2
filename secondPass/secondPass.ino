@@ -9,9 +9,9 @@
 
 // create servo object to control a servo
 // a maximum of eight servo objects can be created
-Servo servoLeft;  // left of the irSensor facing forward
+Servo servoLeft;  // left of the irSensor when system is facing forward
 int servoLeftPos = 0;
-Servo servoRight; // right of the irSensor facing forward
+Servo servoRight; // right of the irSensor when system is facing forward
 int servoRightPos = 0;
 
 int irSensor = 0; // ir sensor pin
@@ -22,13 +22,18 @@ unsigned long interval = 750;
 unsigned long time;
 unsigned long prev_time = 0;
 
+
 void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(19200);
   servoLeft.attach(31);  // attaches the left servo on pin 31 to the servo object
   servoRight.attach(33);  // attaches the right servo on pin 33 to the servo object
+
+  servoLeft.write(servoLeftPos + 90);
+  servoRight.write(-servoRightPos + 90 + 3); //+3 is temp as servo offset
 }
+
 
 void loop()
 {
@@ -53,6 +58,7 @@ void loop()
   }
 }
 
+
 void irSensorRead()
 {
   // irSensorRead reads the sensor 5 times and returns the average
@@ -71,14 +77,34 @@ void irSensorRead()
   irValue = irValue / 5;
 }
 
+
+void gridPos()
+{
+  // grid position gives sequential positions in a grid like sweep a pattern
+  static int gridSize = 20; // length of side of square grid
+  static int servoLeftPos = -gridSize;
+  static int incrementDirection = 1;
+  static int servoRightPos = -gridSize;
+
+  if (servoLeftPos >= -gridSize && servoLeftPos <= gridSize)
+  {
+    // general behavior is to move servoLeftPos
+    servoLeftPos += incrementDirection;
+  }
+  else
+  {
+    horiDirection *= -1;
+    servoLeftPos += incrementDirection;
+    servoRightPos += 1;
+  }
+}
+
+
 void moveNextPos()
 {
   // getNextPos moves the servos to a random location between -30 and +30
   // degrees. Our default position is 90 degrees so we can use relative angles
   // to make our math easier
-
-  servoLeftPos = random(-15,15);
-  servoRightPos = random(-15,15);
 
   servoLeft.write(servoLeftPos + 90);
   servoRight.write(-servoRightPos + 90 + 3); //+3 is temp as servo offset
