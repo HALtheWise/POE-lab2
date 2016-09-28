@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40800,        924]
-NotebookOptionsPosition[     39359,        869]
-NotebookOutlinePosition[     39685,        884]
-CellTagsIndexPosition[     39642,        881]
+NotebookDataLength[     37629,        850]
+NotebookOptionsPosition[     36343,        800]
+NotebookOutlinePosition[     36670,        815]
+CellTagsIndexPosition[     36627,        812]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -81,7 +81,8 @@ Cell[BoxData[
    3.683902582452379*^9, 3.6839027500830927`*^9}, 3.683903513733232*^9, 
    3.683903887562367*^9, 3.68390392560872*^9, 3.683970346157509*^9, 
    3.68401522065232*^9, 3.6840161028119717`*^9, 3.684016164030698*^9, 
-   3.68401885893922*^9, 3.684018953666399*^9, 3.6840193592967167`*^9}]
+   3.68401885893922*^9, 3.684018953666399*^9, 3.6840193592967167`*^9, 
+   3.684021133841301*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -228,7 +229,7 @@ Ew==
  CellChangeTimes->{{3.683903516071151*^9, 3.6839035310700493`*^9}, 
    3.683970346360786*^9, 3.684015220799141*^9, 3.6840161029511127`*^9, 
    3.684016167427537*^9, 3.684018859147944*^9, 3.6840189574900618`*^9, 
-   3.684019359408341*^9}]
+   3.684019359408341*^9, 3.684021133931602*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -316,97 +317,34 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"sphericalToCartesian", "[", 
+  RowBox[{"toCartesian", "[", 
    RowBox[{"{", 
     RowBox[{"distance_", ",", "tilt_", ",", "pan_"}], "}"}], "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"{", "}"}], ",", 
     RowBox[{"{", 
-     RowBox[{
-      RowBox[{"distance", " ", 
-       RowBox[{"Cos", "[", "pan", "]"}], " ", 
-       RowBox[{"Sin", "[", "tilt", "]"}]}], ",", 
-      RowBox[{"distance", " ", 
-       RowBox[{"Sin", "[", "tilt", "]"}], " ", 
-       RowBox[{"Sin", "[", "pan", "]"}]}], ",", 
-      RowBox[{"distance", " ", 
-       RowBox[{"Cos", "[", "tilt", "]"}]}]}], "}"}]}], "\[IndentingNewLine]", 
-   "]"}]}]], "Input",
+     RowBox[{"radPan", ",", "radTilt"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"radPan", "=", 
+      RowBox[{"pan", "*", 
+       FractionBox["\[Pi]", "180"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"radTilt", "=", 
+      RowBox[{"pan", "*", 
+       FractionBox["\[Pi]", "180"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"distance", " ", 
+        RowBox[{"Cos", "[", "radPan", "]"}], " ", 
+        RowBox[{"Sin", "[", "radTilt", "]"}]}], ",", 
+       RowBox[{"distance", " ", 
+        RowBox[{"Cos", "[", "radTilt", "]"}], " ", 
+        RowBox[{"Cos", "[", "radPan", "]"}]}], ",", 
+       RowBox[{"distance", " ", 
+        RowBox[{"Sin", "[", "tilt", "]"}]}]}], "}"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  CellChangeTimes->{{3.6840182890973787`*^9, 3.684018310600751*^9}, {
-  3.684018719742815*^9, 3.68401876888431*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"plotData", "=", 
-   RowBox[{"ListPlot", "[", 
-    RowBox[{"distanceData", ",", 
-     RowBox[{"PlotRange", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "150"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"0", ",", "600"}], "}"}]}], "}"}]}]}], "]"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.6833661963067617`*^9, 3.683366208636072*^9}, {
-  3.683366253271887*^9, 3.68336628442188*^9}, {3.68336631545265*^9, 
-  3.683366315831397*^9}, {3.683366355693892*^9, 3.6833663567497177`*^9}, {
-  3.6833664038668833`*^9, 3.683366431369982*^9}, {3.68336647642032*^9, 
-  3.683366483360021*^9}, {3.6833665182924223`*^9, 3.683366635105036*^9}, {
-  3.6840193665819817`*^9, 3.6840193670891533`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Show", "[", 
-  RowBox[{"plotLine", ",", "plotData"}], "]"}]], "Input",
- CellChangeTimes->{{3.683366271490407*^9, 3.683366277786166*^9}, {
-  3.6833665272316027`*^9, 3.683366527545383*^9}}],
-
-Cell[BoxData[
- GraphicsBox[{{{}, {}, {}}, {{}, {{}, 
-     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
-      0.012833333333333334`], AbsoluteThickness[1.6], PointBox[CompressedData["
-1:eJxTTMoPSmViYGAQBmIQDQFGDmDKoBFCM5hA6I4GKN8AQl+AyetAaIsmKF8D
-Qv+AyVtC6IZaKN8OQk+ohPJdIPSCYijfE0Ir5EP5fhD6QSbUnEAIfSAVKh8C
-FU+C0mFQOh4qHwlVHwsVj4byo6DycVDxcAjtkAClYeYkotpzAGoPQ5ADACSu
-JQs=
-       "]]}, {}}, {}, {}, {{}, {}}}},
-  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-  Axes->{True, True},
-  AxesLabel->{None, None},
-  AxesOrigin->{0, 0},
-  DisplayFunction->Identity,
-  Frame->{{False, False}, {False, False}},
-  FrameLabel->{{None, None}, {None, None}},
-  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
-  GridLines->{None, None},
-  GridLinesStyle->Directive[
-    GrayLevel[0.5, 0.4]],
-  ImagePadding->All,
-  Method->{
-   "DefaultBoundaryStyle" -> Automatic, "DefaultMeshStyle" -> 
-    AbsolutePointSize[6], "ScalingFunctions" -> None, 
-    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
-         Part[#, 1]], 
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
-         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
-         Part[#, 1]], 
-        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
-         Part[#, 2]]}& )}},
-  PlotRange->{{0, 200}, {0, 700}},
-  PlotRangeClipping->True,
-  PlotRangePadding->{{0, 0}, {0, 0}},
-  Ticks->{Automatic, Automatic}]], "Output",
- CellChangeTimes->{{3.6833662786133966`*^9, 3.683366302349152*^9}, 
-   3.683366343669425*^9, {3.683366503612677*^9, 3.683366636316135*^9}, 
-   3.683366723496305*^9, 3.683970346741193*^9, 3.6840152209637423`*^9, 
-   3.684016103080474*^9, 3.684017369215724*^9, 3.684018859361043*^9, 
-   3.684019057296555*^9, {3.6840193499792843`*^9, 3.684019369438922*^9}}]
-}, Open  ]]
+  3.684018719742815*^9, 3.68401876888431*^9}, {3.6840212140848827`*^9, 
+  3.684021330712226*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -427,7 +365,7 @@ Cell[BoxData[
   RowBox[{"DeviceOpen", "[", 
    RowBox[{"\"\<Serial\>\"", ",", 
     RowBox[{"{", 
-     RowBox[{"\"\</dev/ttyUSB0\>\"", ",", 
+     RowBox[{"\"\</dev/ttyUSB1\>\"", ",", 
       RowBox[{"\"\<BaudRate\>\"", "\[Rule]", "19200"}]}], "}"}]}], 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.683366967035421*^9, 3.6833670229287157`*^9}, {
@@ -440,7 +378,7 @@ Cell[BoxData[
   3.684015042464724*^9, 3.684015042677374*^9}, {3.684017372308382*^9, 
   3.684017372952544*^9}, {3.684018419709014*^9, 3.6840184197964697`*^9}, {
   3.684018584167098*^9, 3.684018584237925*^9}, {3.684019334836526*^9, 
-  3.6840193350103903`*^9}}],
+  3.6840193350103903`*^9}, {3.684021455979472*^9, 3.684021456079331*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -556,7 +494,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
+               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$ = 1, 
                Devices`DeviceAPI`DeviceDump`indr$$ = 1}, 
@@ -701,7 +639,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
+               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$, 
                Devices`DeviceAPI`DeviceDump`indr$$}, 
@@ -798,7 +736,8 @@ Cell[BoxData[
    3.684015933757268*^9, 3.68401606423982*^9, 3.684016103333605*^9, 
    3.684017373640205*^9, 3.684018420204913*^9, 3.6840185849089003`*^9, 
    3.684018859832554*^9, 3.6840190631459*^9, 3.6840193795814342`*^9, 
-   3.6840196900129833`*^9}]
+   3.6840196900129833`*^9, 3.6840214002151947`*^9, 3.684021456723171*^9, 
+   3.684021641168991*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -809,7 +748,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"AppendTo", "[", 
      RowBox[{"points", ",", 
-      RowBox[{"sphericalToCartesian", "[", 
+      RowBox[{"toCartesian", "[", 
        RowBox[{"panTiltDistance", "[", 
         RowBox[{"ToExpression", "[", 
          RowBox[{"StringSplit", "[", 
@@ -829,30 +768,22 @@ Cell[BoxData[
   3.684017775735084*^9, 3.684017779956626*^9}, {3.6840183235368233`*^9, 
   3.6840183281455593`*^9}, {3.684018783738584*^9, 3.6840188357695932`*^9}, {
   3.684019655790717*^9, 3.6840196879240503`*^9}, {3.68401973258399*^9, 
-  3.68401980338302*^9}}],
+  3.68401980338302*^9}, {3.684021432533774*^9, 3.6840214961361217`*^9}}],
 
 Cell[BoxData[
  DynamicBox[ToBoxes[
    ListPointPlot3D[
     AppendTo[$CellContext`points, 
-     $CellContext`sphericalToCartesian[
+     $CellContext`toCartesian[
       $CellContext`panTiltDistance[
        ToExpression[
         StringSplit[
          FromCharacterCode[
           DeviceReadBuffer[$CellContext`serial, "ReadTerminator" -> 10]], 
          ","]]]]], ImageSize -> Large], StandardForm],
-  ImageSizeCache->{576., {221., 228.}}]], "Output",
- CellChangeTimes->{{3.684015272802238*^9, 3.6840152945386457`*^9}, {
-   3.684015386582206*^9, 3.6840154062736797`*^9}, {3.6840154688023252`*^9, 
-   3.684015478721258*^9}, {3.684015804999906*^9, 3.684015827309391*^9}, {
-   3.68401597332439*^9, 3.684016007564609*^9}, {3.684017383910172*^9, 
-   3.684017423547183*^9}, {3.684017749346491*^9, 3.684017780249112*^9}, 
-   3.684018243761301*^9, {3.6840183196948357`*^9, 3.68401838209402*^9}, {
-   3.684018430933848*^9, 3.684018440944849*^9}, 3.684018588954959*^9, {
-   3.6840187751772423`*^9, 3.684018781609926*^9}, 3.6840188624196568`*^9, 
-   3.684019065102491*^9, 3.6840193829629*^9, 3.68401970395761*^9, 
-   3.684019747631155*^9, {3.6840197842814817`*^9, 3.684019807357114*^9}}]
+  ImageSizeCache->{1676., {103., 13.}}]], "Output",
+ CellChangeTimes->{
+  3.68402149645855*^9, {3.684021622977436*^9, 3.684021649407065*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -867,7 +798,7 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{956, 1041},
+WindowSize->{1916, 1041},
 WindowMargins->{{2, Automatic}, {2, 37}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
@@ -890,40 +821,35 @@ Cell[708, 27, 104, 1, 65, "Section"],
 Cell[815, 30, 666, 18, 59, "Input"],
 Cell[CellGroupData[{
 Cell[1506, 52, 748, 15, 42, "Input"],
-Cell[2257, 69, 852, 14, 34, "Output"]
+Cell[2257, 69, 878, 15, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3146, 88, 498, 12, 42, "Input"],
-Cell[3647, 102, 6994, 128, 228, "Output"]
+Cell[3172, 89, 498, 12, 42, "Input"],
+Cell[3673, 103, 7016, 128, 228, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10690, 236, 216, 8, 245, "Section"],
-Cell[10909, 246, 192, 3, 30, "Input"],
-Cell[11104, 251, 1271, 35, 109, "Input"],
-Cell[12378, 288, 1012, 26, 144, "Input"],
-Cell[13393, 316, 762, 20, 83, "Input"],
-Cell[14158, 338, 778, 18, 35, "Input"],
+Cell[10738, 237, 216, 8, 245, "Section"],
+Cell[10957, 247, 192, 3, 30, "Input"],
+Cell[11152, 252, 1271, 35, 87, "Input"],
+Cell[12426, 289, 1012, 26, 144, "Input"],
+Cell[13441, 317, 1157, 29, 190, "Input"]
+}, Open  ]],
 Cell[CellGroupData[{
-Cell[14961, 360, 211, 4, 35, "Input"],
-Cell[15175, 366, 1940, 41, 243, "Output"]
+Cell[14635, 351, 126, 1, 65, "Section"],
+Cell[14764, 354, 159, 4, 32, "Input"],
+Cell[CellGroupData[{
+Cell[14948, 362, 1047, 18, 35, "Input"],
+Cell[15998, 382, 18153, 357, 65, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34188, 744, 1331, 26, 35, "Input"],
+Cell[35522, 772, 498, 13, 132, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[17164, 413, 126, 1, 65, "Section"],
-Cell[17293, 416, 159, 4, 32, "Input"],
-Cell[CellGroupData[{
-Cell[17477, 424, 1001, 18, 35, "Input"],
-Cell[18481, 444, 18081, 356, 65, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[36599, 805, 1292, 26, 176, "Input"],
-Cell[37894, 833, 1142, 21, 464, "Output"]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[39085, 860, 104, 1, 65, "Section"],
-Cell[39192, 863, 139, 2, 35, "Input"]
+Cell[36069, 791, 104, 1, 65, "Section"],
+Cell[36176, 794, 139, 2, 35, "Input"]
 }, Open  ]]
 }, Open  ]]
 }

@@ -18,7 +18,7 @@ int irSensor = 0; // ir sensor pin
 int irValue = 0;
 
 // time related
-unsigned long interval = 500;
+unsigned long interval = 750;
 unsigned long time;
 unsigned long prev_time = 0;
 
