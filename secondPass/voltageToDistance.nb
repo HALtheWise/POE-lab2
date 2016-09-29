@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38517,        865]
-NotebookOptionsPosition[     37232,        815]
-NotebookOutlinePosition[     37559,        830]
-CellTagsIndexPosition[     37516,        827]
+NotebookDataLength[     54035,       1088]
+NotebookOptionsPosition[     52700,       1037]
+NotebookOutlinePosition[     53033,       1052]
+CellTagsIndexPosition[     52990,       1049]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["POE Lab 2 - 3D Scanner", "Title",
+Cell[TextData[StyleBox["POE Lab 2 - 3D Scanner", "Chapter"]], "Title",
  CellChangeTimes->{{3.6840188925738*^9, 3.684018904857298*^9}}],
 
 Cell[CellGroupData[{
@@ -82,7 +82,9 @@ Cell[BoxData[
    3.683903887562367*^9, 3.68390392560872*^9, 3.683970346157509*^9, 
    3.68401522065232*^9, 3.6840161028119717`*^9, 3.684016164030698*^9, 
    3.68401885893922*^9, 3.684018953666399*^9, 3.6840193592967167`*^9, 
-   3.684021133841301*^9, 3.684102228146805*^9}]
+   3.684021133841301*^9, 3.684102228146805*^9, 3.684102980859586*^9, 
+   3.6841040153572493`*^9, 3.684104101920355*^9, 3.684104502936933*^9, 
+   3.6841056609069977`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -229,7 +231,9 @@ Ew==
  CellChangeTimes->{{3.683903516071151*^9, 3.6839035310700493`*^9}, 
    3.683970346360786*^9, 3.684015220799141*^9, 3.6840161029511127`*^9, 
    3.684016167427537*^9, 3.684018859147944*^9, 3.6840189574900618`*^9, 
-   3.684019359408341*^9, 3.684021133931602*^9, 3.684102228329843*^9}]
+   3.684019359408341*^9, 3.684021133931602*^9, 3.684102228329843*^9, 
+   3.684102981101466*^9, 3.684104015477709*^9, 3.6841041021011*^9, 
+   3.684104502979517*^9, 3.6841056609836397`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -352,11 +356,9 @@ Cell[CellGroupData[{
 Cell["Open Serial device and start reading data", "Section",
  CellChangeTimes->{{3.684019007281744*^9, 3.684019015647167*^9}}],
 
-Cell[BoxData[
- RowBox[{
-  RowBox[{"points", "=", 
-   RowBox[{"{", "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.6840195182354393`*^9, 3.684019523681191*^9}}],
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6840195182354393`*^9, 3.684019523681191*^9}, 
+   3.684105735464219*^9}],
 
 Cell[CellGroupData[{
 
@@ -368,18 +370,14 @@ Cell[BoxData[
      RowBox[{"\"\</dev/ttyUSB0\>\"", ",", 
       RowBox[{"\"\<BaudRate\>\"", "\[Rule]", "19200"}]}], "}"}]}], 
    "]"}]}]], "Input",
- CellChangeTimes->{{3.683366967035421*^9, 3.6833670229287157`*^9}, {
-  3.68336730353249*^9, 3.683367305992813*^9}, {3.683369022700472*^9, 
-  3.68336902287643*^9}, {3.6833697602386913`*^9, 3.683369765350923*^9}, {
-  3.683369879320653*^9, 3.683369879454358*^9}, {3.683369914695787*^9, 
-  3.683369916101098*^9}, {3.6833701594339533`*^9, 3.68337015955385*^9}, {
-  3.683370791570573*^9, 3.683370791812965*^9}, {3.683370863275147*^9, 
-  3.683370938506722*^9}, {3.683973423462914*^9, 3.683973423546906*^9}, {
-  3.684015042464724*^9, 3.684015042677374*^9}, {3.684017372308382*^9, 
-  3.684017372952544*^9}, {3.684018419709014*^9, 3.6840184197964697`*^9}, {
-  3.684018584167098*^9, 3.684018584237925*^9}, {3.684019334836526*^9, 
-  3.6840193350103903`*^9}, {3.684021455979472*^9, 3.684021456079331*^9}, {
-  3.684102220647492*^9, 3.684102220873767*^9}}],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQra30kK288LUj1467vCBag+ujAYhWOGpvCKJdsq6x
+VwDp7dx3wHTMYvYUEH3YajWYPuX0qghES3W9A9OPncPKQbSRTTOY/vTo7VQQ
+rbLzI5hWcvr0BESfZ/4FphnPvXgLogXNA76DaMML71TnF712dGz4CKZZ7/tV
+bAbSPGtDwbTLvc7ZW4C0XfU8CL2hTG4rkF5XUwmm70WwGoNo0bnsYPrSkVsT
+QLRc6AMwfS38/8xtQPphJ9MsEO24YwrnPSD97OtsML3fvDcLRE97ppsNohMy
+ni4B0bJNr8D0vSLR8yD6Q7A0mAYAfCyp0A==
+  "]],
 
 Cell[BoxData[
  InterpretationBox[
@@ -457,20 +455,7 @@ Cell[BoxData[
           AspectRatio->Automatic,
           ImageSize->{Automatic, 
             Dynamic[3.5 CurrentValue["FontCapHeight"]]},
-          PlotRange->{{0., 26.}, {0., 26.}},
-          ImageCache->GraphicsData["CompressedBitmap", "\<\
-eJztlEsvA1EUx+81RT3WWFj007DyIRqRsBCCD9CwZWPbYuO50sajajptp9NO
-a/rSUEWjqh6NSOMRsf2797ZEEzS2WJw75/X75+TmzO2zTgwODFsnhvqtlt4x
-6+jgUP+4pWdkjKUkSgjp5mYh3Adz3w4Jh/tR+BUZHs8OaUcorJkQDmtN3KMI
-hVQK9/YWhU/ZZYCEVFyH7PXi4eWZtIpTwtLKMqZnZpC/LFZyFOXHewa6twWj
-6xriyWQNY59zwGazIVfIk7YKo6p+0R6J6kjsp+q1swF/VXtTFcqXrnFcLPBI
-2AdcxKX7MtK5U3N9pWAqgY2gKqjy8xPs83OYnJrCyfmZyOWuLrHgctZVMtUo
-GZnDBo6x9OLWJu6eHn4gxGB4IjpuynecloSQhGAygbOba6yyJfxGpbGqcnFb
-EiNxcwUCjVylgUesn13N29VV+r+TknBUOOe0mMNcncath/8l/rSESSwoXyVu
-ieOsCbMrqyy9GdLe07mrYvPXQi1VuTVZhsPphH3dyb4u9mu/P5KfYV21pehe
-5KvSUSaNgKp+LMm7HlHKHsSgsUm9ipd0cp5C8SkUfp8s6vzNz6QNZLMHpANG
-LEphGBHKH3fKi6yJvgKHVDNZ\
-\>"]], GridBox[{
+          PlotRange->{{0., 26.}, {0., 26.}}], GridBox[{
            {
             RowBox[{
              TagBox["\<\"Class: \"\>",
@@ -510,7 +495,7 @@ LEphGBHKH3fKi6yJvgKHVDNZ\
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
                "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
-                Devices`DeviceAPI`DeviceDump`ind$$ = 1, 
+                Devices`DeviceAPI`DeviceDump`ind$$ = 2, 
                Devices`DeviceAPI`DeviceDump`indr$$ = 1}, 
                DynamicBox[ToBoxes[Devices`DeviceAPI`DeviceDump`ind$$ = If[
                     DeviceOpenQ[Devices`DeviceAPI`DeviceDump`d$$], 1, 2]; 
@@ -527,7 +512,7 @@ LEphGBHKH3fKi6yJvgKHVDNZ\
                    Part[
                    Devices`DeviceAPI`DeviceDump`opacities$$, 
                     Devices`DeviceAPI`DeviceDump`indr$$]], StandardForm],
-                ImageSizeCache->{161., {4., 10.}}],
+                ImageSizeCache->{183., {4., 10.}}],
                DynamicModuleValues:>{}],
               "SummaryItem"]}], "\[SpanFromLeft]"}
           },
@@ -751,70 +736,307 @@ LEphGBHKH3fKi6yJvgKHVDNZ\
    3.684017373640205*^9, 3.684018420204913*^9, 3.6840185849089003`*^9, 
    3.684018859832554*^9, 3.6840190631459*^9, 3.6840193795814342`*^9, 
    3.6840196900129833`*^9, 3.6840214002151947`*^9, 3.684021456723171*^9, 
-   3.684021641168991*^9, {3.684102229136057*^9, 3.684102242090577*^9}}]
+   3.684021641168991*^9, {3.684102229136057*^9, 3.684102242090577*^9}, 
+   3.6841030093784733`*^9, 3.684103112974387*^9, {3.68410324400959*^9, 
+   3.6841032533291197`*^9}, {3.6841034601221437`*^9, 3.6841034637958107`*^9}, 
+   3.684103657696109*^9, 3.6841038037103777`*^9, 3.684103869033042*^9, 
+   3.6841039346947403`*^9, {3.684104024960141*^9, 3.684104049425902*^9}, {
+   3.684104079817504*^9, 3.6841041092703657`*^9}, 3.684104160044633*^9, 
+   3.684104515144964*^9, 3.68410520047836*^9, 3.684105288884267*^9, 
+   3.6841056613035517`*^9, 3.6841057435059547`*^9}]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Dynamic", "@", 
-  RowBox[{"ListPointPlot3D", "[", 
-   RowBox[{
-    RowBox[{"AppendTo", "[", 
-     RowBox[{"points", ",", 
-      RowBox[{"toCartesian", "[", 
-       RowBox[{"panTiltDistance", "[", 
-        RowBox[{"ToExpression", "[", 
-         RowBox[{"StringSplit", "[", 
-          RowBox[{
-           RowBox[{"FromCharacterCode", "[", 
-            RowBox[{"DeviceReadBuffer", "[", 
-             RowBox[{"serial", ",", 
-              RowBox[{"\"\<ReadTerminator\>\"", "\[Rule]", "10"}]}], "]"}], 
-            "]"}], ",", "\"\<,\>\""}], "]"}], "]"}], "]"}], "]"}]}], "]"}], 
-    ",", 
-    RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.684015104618638*^9, 3.68401510616063*^9}, {
-  3.684015155508219*^9, 3.684015173996565*^9}, {3.6840152071272507`*^9, 
-  3.684015208185246*^9}, {3.684015253354274*^9, 3.684015276919364*^9}, {
-  3.6840153708009377`*^9, 3.684015406073209*^9}, {3.684015967473193*^9, 
-  3.6840159969949007`*^9}, {3.684017394789523*^9, 3.684017420021591*^9}, {
-  3.684017775735084*^9, 3.684017779956626*^9}, {3.6840183235368233`*^9, 
-  3.6840183281455593`*^9}, {3.684018783738584*^9, 3.6840188357695932`*^9}, {
-  3.684019655790717*^9, 3.6840196879240503`*^9}, {3.68401973258399*^9, 
-  3.68401980338302*^9}, {3.684021432533774*^9, 3.6840214961361217`*^9}}],
-
-Cell[BoxData[
- DynamicBox[ToBoxes[
-   ListPointPlot3D[
-    AppendTo[$CellContext`points, 
-     $CellContext`toCartesian[
-      $CellContext`panTiltDistance[
-       ToExpression[
-        StringSplit[
-         FromCharacterCode[
-          DeviceReadBuffer[$CellContext`serial, "ReadTerminator" -> 10]], 
-         ","]]]]], ImageSize -> Large], StandardForm],
-  ImageSizeCache->{1240., {23., 13.}}]], "Output",
- CellChangeTimes->{
-  3.68402149645855*^9, {3.684021622977436*^9, 3.684021649407065*^9}, {
-   3.684102229318159*^9, 3.68410224435002*^9}}]
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"points", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"/", 
+  RowBox[{"Dynamic", "@", 
+   RowBox[{"ListPointPlot3D", "[", 
+    RowBox[{
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"points", ",", 
+       RowBox[{"toCartesian", "[", 
+        RowBox[{"panTiltDistance", "[", 
+         RowBox[{"ToExpression", "[", 
+          RowBox[{"StringSplit", "[", 
+           RowBox[{
+            RowBox[{"FromCharacterCode", "[", 
+             RowBox[{"DeviceReadBuffer", "[", 
+              RowBox[{"serial", ",", 
+               RowBox[{"\"\<ReadTerminator\>\"", "\[Rule]", "10"}]}], "]"}], 
+             "]"}], ",", "\"\<,\>\""}], "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+     ",", 
+     RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}]}]}]}], "Input",
+ CellChangeTimes->{{3.6841043975811577`*^9, 3.684104411608992*^9}, {
+   3.6841044689485693`*^9, 3.684104487929335*^9}, 3.684104546492498*^9, {
+   3.684105134444283*^9, 3.684105175244432*^9}, {3.684105223870569*^9, 
+   3.684105233863044*^9}, 3.6841053580238047`*^9, 3.684105626967767*^9, {
+   3.684105709994445*^9, 3.684105741218809*^9}, 3.684105772612468*^9},
+ EmphasizeSyntaxErrors->True]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Close serial device", "Section",
- CellChangeTimes->{{3.684019020360981*^9, 3.684019023689354*^9}}],
+Cell[TextData[StyleBox["Close serial device", "Chapter"]], "Title",
+ CellChangeTimes->{3.6841056536694527`*^9}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"DeviceClose", "[", "serial", "]"}]], "Input",
- CellChangeTimes->{{3.6836259586568613`*^9, 3.6836259625465393`*^9}}]
+ RowBox[{"DeviceClose", "[", "serial", "]"}]], "Input"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "DeviceObject","ncdev",
+   "\"\\!\\(\\*InterpretationBox[RowBox[{TagBox[\\\"DeviceObject\\\", \
+\\\"SummaryHead\\\"], \\\"[\\\", DynamicModuleBox[{Typeset`open$$ = False}, \
+PanelBox[PaneSelectorBox[List[Rule[False, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SquarePlusIconMedium\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, True]], Rule[Appearance, None], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], Rule[Alignment, List[Center, \
+Center]], Rule[ImageSize, Dynamic[List[Automatic, Times[3.5`, CurrentValue[\\\
+\"FontCapHeight\\\"], Power[AbsoluteCurrentValue[Magnification], -1]]]]]], \
+GraphicsBox[List[Thickness[0.038461538461538464`], \
+StyleBox[List[FilledCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[25.5`, 2.5`], List[25.5`, 1.395`], List[24.605`, 0.5`], \
+List[23.5`, 0.5`], List[2.5`, 0.5`], List[1.395`, 0.5`], List[0.5`, 1.395`], \
+List[0.5`, 2.5`], List[0.5`, 23.5`], List[0.5`, 24.605`], List[1.395`, \
+25.5`], List[2.5`, 25.5`], List[23.5`, 25.5`], List[24.605`, 25.5`], \
+List[25.5`, 24.605`], List[25.5`, 23.5`], List[25.5`, 2.5`]]]]], \
+FaceForm[RGBColor[0.941`, 0.961`, 0.957`, 1.`]], Rule[StripOnInput, False]], \
+StyleBox[List[JoinedCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[25.5`, 2.5`], List[25.5`, 1.395`], List[24.605`, 0.5`], \
+List[23.5`, 0.5`], List[2.5`, 0.5`], List[1.395`, 0.5`], List[0.5`, 1.395`], \
+List[0.5`, 2.5`], List[0.5`, 23.5`], List[0.5`, 24.605`], List[1.395`, \
+25.5`], List[2.5`, 25.5`], List[23.5`, 25.5`], List[24.605`, 25.5`], \
+List[25.5`, 24.605`], List[25.5`, 23.5`], List[25.5`, 2.5`]]], \
+Rule[CurveClosed, List[1]]]], JoinForm[List[\\\"Miter\\\", 10.`]], \
+RGBColor[0.7`, 0.7`, 0.7`, 1.`], Rule[StripOnInput, False]], \
+StyleBox[List[FilledCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[11.133`, 18.727999999999998`], List[11.133`, \
+18.451999999999998`], List[11.357000000000001`, 18.227999999999998`], \
+List[11.633`, 18.227999999999998`], List[14.792`, 18.227999999999998`], \
+List[15.068`, 18.227999999999998`], List[15.292`, 18.451999999999998`], \
+List[15.292`, 18.727999999999998`], List[15.292`, 20.639000000000003`], \
+List[15.292`, 20.915`], List[15.068`, 21.139000000000003`], List[14.792`, \
+21.139000000000003`], List[11.633`, 21.139000000000003`], \
+List[11.357000000000001`, 21.139000000000003`], List[11.133`, 20.915`], \
+List[11.133`, 20.639000000000003`], List[11.133`, 18.727999999999998`]]]]], \
+FaceForm[RGBColor[0.5423`, 0.63104`, 0.63597`, 1.`]], Rule[StripOnInput, \
+False]], StyleBox[List[FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], \
+List[0, 1, 0]]], List[List[List[12.357000000000001`, 1.`], \
+List[14.113000000000001`, 1.`], List[14.113000000000001`, 9.554`], \
+List[12.357000000000001`, 9.554`]]]]], FaceForm[RGBColor[0.5`, 0.5`, 0.5`, \
+1.`]], Rule[StripOnInput, False]], \
+StyleBox[List[FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, \
+0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0]]], \
+List[List[List[15.876000000000001`, 19.799`], List[8.122`, 19.799`], \
+List[8.122`, 11.516`], List[10.573`, 11.516`], List[10.573`, 11.493`], \
+List[11.982000000000001`, 9.171`], List[14.539`, 9.171`], \
+List[15.876000000000001`, 11.493`], List[15.876000000000001`, 11.516`], \
+List[18.326`, 11.516`], List[18.326`, 19.799`], List[15.876000000000001`, \
+19.799`]]]], FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0]]], List[List[List[8.806000000000001`, 7.993`], List[9.995000000000001`, \
+7.993`], List[9.995000000000001`, 11.008`], List[8.806000000000001`, \
+11.008`]]]], FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0]]], List[List[List[16.5`, 7.993`], List[17.689`, 7.993`], List[17.689`, \
+11.008`], List[16.5`, 11.008`]]]]], FaceForm[RGBColor[0.624375`, 0.695304`, \
+0.691308`, 1.`]], Rule[StripOnInput, False]]], List[Rule[ImageSize, \
+List[Automatic, Dynamic[Times[3.5`, CurrentValue[\\\"FontCapHeight\\\"]]]]], \
+Rule[ImageSize, List[26.`, 26.`]], Rule[PlotRange, List[List[0.`, 26.`], \
+List[0.`, 26.`]]], Rule[AspectRatio, Automatic]]], \
+GridBox[List[List[RowBox[List[TagBox[\\\"\\\\\\\"Class: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\
+\\\"Serial\\\\\\\"\\\", \\\"SummaryItem\\\"]]], RowBox[List[TagBox[\\\"\\\\\\\
+\"ID: \\\\\\\"\\\", \\\"SummaryItemAnnotation\\\"], \
+\\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"1\\\", \\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[\\\"\\\\\\\"Status: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[DynamicModuleBox[List[Set[Devices`DeviceAPI`DeviceDump`lights$$, \
+List[Style[Graphics[List[List[RGBColor[0.88`, 1, 0.88`], Disk[List[0, 0]]], \
+List[RGBColor[0, 0.85`, 0], Circle[List[0, 0]]]], Rule[PlotRange, List[-2.2`, \
+1.1`]], Rule[ImageSize, 9], Rule[ImageMargins, List[List[3, 3], List[2, 0]]], \
+Rule[BaseStyle, List[Rule[CacheGraphics, False]]]], Rule[Selectable, False]], \
+Style[Graphics[List[List[RGBColor[1, 1, 0], Disk[List[0, 0]]], \
+List[RGBColor[0.8`, 0.8`, 0], Circle[List[0, 0]]]], Rule[PlotRange, \
+List[-2.2`, 1.1`]], Rule[ImageSize, 9], Rule[ImageMargins, List[List[3, 3], \
+List[2, 0]]], Rule[BaseStyle, List[Rule[CacheGraphics, False]]]], \
+Rule[Selectable, False]]]], Set[Devices`DeviceAPI`DeviceDump`opacities$$, \
+List[Opacity[1], Opacity[0.2`]]], Set[Devices`DeviceAPI`DeviceDump`status$$, \
+List[\\\"Connected (/dev/ttyUSB0)\\\", \\\"Not connected \
+(/dev/ttyUSB0)\\\"]], Set[Devices`DeviceAPI`DeviceDump`d$$, \
+DeviceObject[List[\\\"Serial\\\", 1]]], Devices`DeviceAPI`DeviceDump`ind$$, \
+Devices`DeviceAPI`DeviceDump`indr$$], \
+DynamicBox[ToBoxes[CompoundExpression[Set[Devices`DeviceAPI`DeviceDump`ind$$, \
+If[DeviceOpenQ[Devices`DeviceAPI`DeviceDump`d$$], 1, 2]], \
+Set[Devices`DeviceAPI`DeviceDump`indr$$, \
+If[DeviceFramework`DeviceRegisteredQ[Devices`DeviceAPI`DeviceDump`d$$], 1, \
+2]], Style[Row[List[Part[Devices`DeviceAPI`DeviceDump`lights$$, \
+Devices`DeviceAPI`DeviceDump`ind$$], \
+Part[Devices`DeviceAPI`DeviceDump`status$$, \
+Devices`DeviceAPI`DeviceDump`ind$$]]], \
+Part[Devices`DeviceAPI`DeviceDump`opacities$$, \
+Devices`DeviceAPI`DeviceDump`indr$$]]], StandardForm]], \
+RuleDelayed[DynamicModuleValues, List[]]], \\\"SummaryItem\\\"]]], \
+\\\"\\\\[SpanFromLeft]\\\"]], Rule[GridBoxAlignment, \
+List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
+List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
+List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
+List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
+Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
+Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
+List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaselinePosition, List[1, 1]]]], Rule[True, \
+GridBox[List[List[PaneBox[ButtonBox[DynamicBox[FEPrivate`FrontEndResource[\\\"\
+FEBitmaps\\\", \\\"SquareMinusIconMedium\\\"]], RuleDelayed[ButtonFunction, \
+Set[Typeset`open$$, False]], Rule[Appearance, None], Rule[Evaluator, \
+Automatic], Rule[Method, \\\"Preemptive\\\"]], Rule[Alignment, List[Center, \
+Center]], Rule[ImageSize, Dynamic[List[Automatic, Times[3.5`, CurrentValue[\\\
+\"FontCapHeight\\\"], Power[AbsoluteCurrentValue[Magnification], -1]]]]]], \
+GraphicsBox[List[Thickness[0.038461538461538464`], \
+StyleBox[List[FilledCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[25.5`, 2.5`], List[25.5`, 1.395`], List[24.605`, 0.5`], \
+List[23.5`, 0.5`], List[2.5`, 0.5`], List[1.395`, 0.5`], List[0.5`, 1.395`], \
+List[0.5`, 2.5`], List[0.5`, 23.5`], List[0.5`, 24.605`], List[1.395`, \
+25.5`], List[2.5`, 25.5`], List[23.5`, 25.5`], List[24.605`, 25.5`], \
+List[25.5`, 24.605`], List[25.5`, 23.5`], List[25.5`, 2.5`]]]]], \
+FaceForm[RGBColor[0.941`, 0.961`, 0.957`, 1.`]], Rule[StripOnInput, False]], \
+StyleBox[List[JoinedCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[25.5`, 2.5`], List[25.5`, 1.395`], List[24.605`, 0.5`], \
+List[23.5`, 0.5`], List[2.5`, 0.5`], List[1.395`, 0.5`], List[0.5`, 1.395`], \
+List[0.5`, 2.5`], List[0.5`, 23.5`], List[0.5`, 24.605`], List[1.395`, \
+25.5`], List[2.5`, 25.5`], List[23.5`, 25.5`], List[24.605`, 25.5`], \
+List[25.5`, 24.605`], List[25.5`, 23.5`], List[25.5`, 2.5`]]], \
+Rule[CurveClosed, List[1]]]], JoinForm[List[\\\"Miter\\\", 10.`]], \
+RGBColor[0.7`, 0.7`, 0.7`, 1.`], Rule[StripOnInput, False]], \
+StyleBox[List[FilledCurveBox[List[List[List[1, 4, 3], List[0, 1, 0], List[1, \
+3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, 0], List[1, 3, 3], List[0, 1, \
+0]]], List[List[List[11.133`, 18.727999999999998`], List[11.133`, \
+18.451999999999998`], List[11.357000000000001`, 18.227999999999998`], \
+List[11.633`, 18.227999999999998`], List[14.792`, 18.227999999999998`], \
+List[15.068`, 18.227999999999998`], List[15.292`, 18.451999999999998`], \
+List[15.292`, 18.727999999999998`], List[15.292`, 20.639000000000003`], \
+List[15.292`, 20.915`], List[15.068`, 21.139000000000003`], List[14.792`, \
+21.139000000000003`], List[11.633`, 21.139000000000003`], \
+List[11.357000000000001`, 21.139000000000003`], List[11.133`, 20.915`], \
+List[11.133`, 20.639000000000003`], List[11.133`, 18.727999999999998`]]]]], \
+FaceForm[RGBColor[0.5423`, 0.63104`, 0.63597`, 1.`]], Rule[StripOnInput, \
+False]], StyleBox[List[FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], \
+List[0, 1, 0]]], List[List[List[12.357000000000001`, 1.`], \
+List[14.113000000000001`, 1.`], List[14.113000000000001`, 9.554`], \
+List[12.357000000000001`, 9.554`]]]]], FaceForm[RGBColor[0.5`, 0.5`, 0.5`, \
+1.`]], Rule[StripOnInput, False]], \
+StyleBox[List[FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0], List[0, 1, \
+0], List[0, 1, 0], List[0, 1, 0], List[0, 1, 0]]], \
+List[List[List[15.876000000000001`, 19.799`], List[8.122`, 19.799`], \
+List[8.122`, 11.516`], List[10.573`, 11.516`], List[10.573`, 11.493`], \
+List[11.982000000000001`, 9.171`], List[14.539`, 9.171`], \
+List[15.876000000000001`, 11.493`], List[15.876000000000001`, 11.516`], \
+List[18.326`, 11.516`], List[18.326`, 19.799`], List[15.876000000000001`, \
+19.799`]]]], FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0]]], List[List[List[8.806000000000001`, 7.993`], List[9.995000000000001`, \
+7.993`], List[9.995000000000001`, 11.008`], List[8.806000000000001`, \
+11.008`]]]], FilledCurveBox[List[List[List[0, 2, 0], List[0, 1, 0], List[0, \
+1, 0]]], List[List[List[16.5`, 7.993`], List[17.689`, 7.993`], List[17.689`, \
+11.008`], List[16.5`, 11.008`]]]]], FaceForm[RGBColor[0.624375`, 0.695304`, \
+0.691308`, 1.`]], Rule[StripOnInput, False]]], List[Rule[ImageSize, \
+List[Automatic, Dynamic[Times[3.5`, CurrentValue[\\\"FontCapHeight\\\"]]]]], \
+Rule[ImageSize, List[26.`, 26.`]], Rule[PlotRange, List[List[0.`, 26.`], \
+List[0.`, 26.`]]], Rule[AspectRatio, Automatic]]], \
+GridBox[List[List[RowBox[List[TagBox[\\\"\\\\\\\"Class: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"\\\\\
+\\\"Serial\\\\\\\"\\\", \\\"SummaryItem\\\"]]], RowBox[List[TagBox[\\\"\\\\\\\
+\"ID: \\\\\\\"\\\", \\\"SummaryItemAnnotation\\\"], \
+\\\"\\\\[InvisibleSpace]\\\", TagBox[\\\"1\\\", \\\"SummaryItem\\\"]]]], \
+List[RowBox[List[TagBox[\\\"\\\\\\\"Status: \\\\\\\"\\\", \
+\\\"SummaryItemAnnotation\\\"], \\\"\\\\[InvisibleSpace]\\\", \
+TagBox[DynamicModuleBox[List[Set[Devices`DeviceAPI`DeviceDump`lights$$, \
+List[Style[Graphics[List[List[RGBColor[0.88`, 1, 0.88`], Disk[List[0, 0]]], \
+List[RGBColor[0, 0.85`, 0], Circle[List[0, 0]]]], Rule[PlotRange, List[-2.2`, \
+1.1`]], Rule[ImageSize, 9], Rule[ImageMargins, List[List[3, 3], List[2, 0]]], \
+Rule[BaseStyle, List[Rule[CacheGraphics, False]]]], Rule[Selectable, False]], \
+Style[Graphics[List[List[RGBColor[1, 1, 0], Disk[List[0, 0]]], \
+List[RGBColor[0.8`, 0.8`, 0], Circle[List[0, 0]]]], Rule[PlotRange, \
+List[-2.2`, 1.1`]], Rule[ImageSize, 9], Rule[ImageMargins, List[List[3, 3], \
+List[2, 0]]], Rule[BaseStyle, List[Rule[CacheGraphics, False]]]], \
+Rule[Selectable, False]]]], Set[Devices`DeviceAPI`DeviceDump`opacities$$, \
+List[Opacity[1], Opacity[0.2`]]], Set[Devices`DeviceAPI`DeviceDump`status$$, \
+List[\\\"Connected (/dev/ttyUSB0)\\\", \\\"Not connected \
+(/dev/ttyUSB0)\\\"]], Set[Devices`DeviceAPI`DeviceDump`d$$, \
+DeviceObject[List[\\\"Serial\\\", 1]]], Devices`DeviceAPI`DeviceDump`ind$$, \
+Devices`DeviceAPI`DeviceDump`indr$$], \
+DynamicBox[ToBoxes[CompoundExpression[Set[Devices`DeviceAPI`DeviceDump`ind$$, \
+If[DeviceOpenQ[Devices`DeviceAPI`DeviceDump`d$$], 1, 2]], \
+Set[Devices`DeviceAPI`DeviceDump`indr$$, \
+If[DeviceFramework`DeviceRegisteredQ[Devices`DeviceAPI`DeviceDump`d$$], 1, \
+2]], Style[Row[List[Part[Devices`DeviceAPI`DeviceDump`lights$$, \
+Devices`DeviceAPI`DeviceDump`ind$$], \
+Part[Devices`DeviceAPI`DeviceDump`status$$, \
+Devices`DeviceAPI`DeviceDump`ind$$]]], \
+Part[Devices`DeviceAPI`DeviceDump`opacities$$, \
+Devices`DeviceAPI`DeviceDump`indr$$]]], StandardForm]], \
+RuleDelayed[DynamicModuleValues, List[]]], \\\"SummaryItem\\\"]]], \
+\\\"\\\\[SpanFromLeft]\\\"], \
+List[TagBox[DynamicModuleBox[List[Set[Devices`DeviceAPI`DeviceDump`opacities$$\
+, List[Opacity[1], Opacity[0.2`]]], Set[Devices`DeviceAPI`DeviceDump`d$$, \
+DeviceObject[List[\\\"Serial\\\", 1]]], Devices`DeviceAPI`DeviceDump`props$$, \
+Devices`DeviceAPI`DeviceDump`vals$$, Devices`DeviceAPI`DeviceDump`reg$$], \
+DynamicBox[ToBoxes[CompoundExpression[Set[Devices`DeviceAPI`DeviceDump`reg$$, \
+DeviceFramework`DeviceRegisteredQ[Devices`DeviceAPI`DeviceDump`d$$]], \
+Set[Devices`DeviceAPI`DeviceDump`props$$, \
+DeviceFramework`DeviceExternalProperties[Devices`DeviceAPI`DeviceDump`d$$]], \
+Set[Devices`DeviceAPI`DeviceDump`vals$$, \
+Devices`DeviceAPI`DeviceDump`d$$[Devices`DeviceAPI`DeviceDump`props$$]], \
+Column[Join[List[BoxForm`SummaryItem[List[\\\"Properties: \\\", \
+If[Or[Not[Devices`DeviceAPI`DeviceDump`reg$$], \
+SameQ[Devices`DeviceAPI`DeviceDump`props$$, List[]]], Style[None, \
+Part[Devices`DeviceAPI`DeviceDump`opacities$$, \
+If[Devices`DeviceAPI`DeviceDump`reg$$, 1, 2]]], \\\"\\\"]]]], \
+MapThread[Function[BoxForm`SummaryItem[List[StringJoin[\\\"      \\\", \
+ToString[Slot[1]], \\\": \\\"], Slot[2]]]], \
+List[Devices`DeviceAPI`DeviceDump`props$$, \
+Devices`DeviceAPI`DeviceDump`vals$$]]]]], StandardForm]], \
+RuleDelayed[DynamicModuleValues, List[]]], \\\"SummaryItem\\\"], \
+\\\"\\\\[SpanFromLeft]\\\"]], Rule[GridBoxAlignment, \
+List[Rule[\\\"Columns\\\", List[List[Left]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[AutoDelete, False], Rule[GridBoxItemSize, \
+List[Rule[\\\"Columns\\\", List[List[Automatic]]], Rule[\\\"Rows\\\", \
+List[List[Automatic]]]]], Rule[GridBoxSpacings, List[Rule[\\\"Columns\\\", \
+List[List[2]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], Rule[BaseStyle, \
+List[Rule[ShowStringCharacters, False], Rule[NumberMarks, False], \
+Rule[PrintPrecision, 3], Rule[ShowSyntaxStyles, False]]]]]], \
+Rule[GridBoxAlignment, List[Rule[\\\"Rows\\\", List[List[Top]]]]], \
+Rule[AutoDelete, False], Rule[GridBoxItemSize, List[Rule[\\\"Columns\\\", \
+List[List[Automatic]]], Rule[\\\"Rows\\\", List[List[Automatic]]]]], \
+Rule[BaselinePosition, List[1, 1]]]]], Dynamic[Typeset`open$$], \
+Rule[ImageSize, Automatic]], Rule[BaselinePosition, Baseline]], \
+RuleDelayed[DynamicModuleValues, List[]]], \\\"]\\\"}], \
+DeviceObject[List[\\\"Serial\\\", 1]], Rule[Selectable, False], \
+Rule[Editable, False], Rule[SelectWithContents, True]]\\) is not open.\"",2,
+   32,1958,20718530106299547206,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.684105827125856*^9}],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.684105827153791*^9}]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1916, 1041},
-WindowMargins->{{2, Automatic}, {2, 37}},
+WindowSize->{956, 1041},
+WindowMargins->{{2, Automatic}, {2, Automatic}},
 FrontEndVersion->"11.0 for Linux x86 (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -830,41 +1052,42 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 103, 1, 93, "Title"],
+Cell[580, 22, 134, 1, 81, "Title"],
 Cell[CellGroupData[{
-Cell[708, 27, 104, 1, 65, "Section"],
-Cell[815, 30, 666, 18, 59, "Input"],
+Cell[739, 27, 104, 1, 65, "Section"],
+Cell[846, 30, 666, 18, 103, "Input"],
 Cell[CellGroupData[{
-Cell[1506, 52, 748, 15, 42, "Input"],
-Cell[2257, 69, 900, 15, 34, "Output"]
+Cell[1537, 52, 748, 15, 42, "Input"],
+Cell[2288, 69, 1022, 17, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3194, 89, 498, 12, 42, "Input"],
-Cell[3695, 103, 7038, 128, 228, "Output"]
+Cell[3347, 91, 498, 12, 42, "Input"],
+Cell[3848, 105, 7156, 130, 228, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10782, 237, 216, 8, 245, "Section"],
-Cell[11001, 247, 192, 3, 30, "Input"],
-Cell[11196, 252, 1271, 35, 87, "Input"],
-Cell[12470, 289, 1012, 26, 144, "Input"],
-Cell[13485, 317, 1157, 29, 190, "Input"]
+Cell[11053, 241, 216, 8, 245, "Section"],
+Cell[11272, 251, 192, 3, 30, "Input"],
+Cell[11467, 256, 1271, 35, 109, "Input"],
+Cell[12741, 293, 1012, 26, 144, "Input"],
+Cell[13756, 321, 1157, 29, 190, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14679, 351, 126, 1, 65, "Section"],
-Cell[14808, 354, 159, 4, 32, "Input"],
+Cell[14950, 355, 126, 1, 65, "Section"],
+Cell[15079, 358, 120, 2, 30, "Input"],
 Cell[CellGroupData[{
-Cell[14992, 362, 1096, 19, 35, "Input"],
-Cell[16091, 383, 18901, 370, 65, "Output"]
+Cell[15224, 364, 639, 15, 35, "Input"],
+Cell[15866, 381, 18691, 364, 65, "Output"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[35029, 758, 1331, 26, 35, "Input"],
-Cell[36363, 786, 546, 14, 52, "Output"]
+Cell[34572, 748, 1194, 27, 221, "Input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36958, 806, 104, 1, 65, "Section"],
-Cell[37065, 809, 139, 2, 35, "Input"]
+Cell[35815, 781, 111, 1, 81, "Title"],
+Cell[CellGroupData[{
+Cell[35951, 786, 69, 1, 35, "Input"],
+Cell[36023, 789, 16570, 241, 58, "Message"],
+Cell[52596, 1032, 76, 1, 63, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
