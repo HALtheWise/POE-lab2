@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37629,        850]
-NotebookOptionsPosition[     36343,        800]
-NotebookOutlinePosition[     36670,        815]
-CellTagsIndexPosition[     36627,        812]
+NotebookDataLength[     38517,        865]
+NotebookOptionsPosition[     37232,        815]
+NotebookOutlinePosition[     37559,        830]
+CellTagsIndexPosition[     37516,        827]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -82,7 +82,7 @@ Cell[BoxData[
    3.683903887562367*^9, 3.68390392560872*^9, 3.683970346157509*^9, 
    3.68401522065232*^9, 3.6840161028119717`*^9, 3.684016164030698*^9, 
    3.68401885893922*^9, 3.684018953666399*^9, 3.6840193592967167`*^9, 
-   3.684021133841301*^9}]
+   3.684021133841301*^9, 3.684102228146805*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -229,7 +229,7 @@ Ew==
  CellChangeTimes->{{3.683903516071151*^9, 3.6839035310700493`*^9}, 
    3.683970346360786*^9, 3.684015220799141*^9, 3.6840161029511127`*^9, 
    3.684016167427537*^9, 3.684018859147944*^9, 3.6840189574900618`*^9, 
-   3.684019359408341*^9, 3.684021133931602*^9}]
+   3.684019359408341*^9, 3.684021133931602*^9, 3.684102228329843*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -365,7 +365,7 @@ Cell[BoxData[
   RowBox[{"DeviceOpen", "[", 
    RowBox[{"\"\<Serial\>\"", ",", 
     RowBox[{"{", 
-     RowBox[{"\"\</dev/ttyUSB1\>\"", ",", 
+     RowBox[{"\"\</dev/ttyUSB0\>\"", ",", 
       RowBox[{"\"\<BaudRate\>\"", "\[Rule]", "19200"}]}], "}"}]}], 
    "]"}]}]], "Input",
  CellChangeTimes->{{3.683366967035421*^9, 3.6833670229287157`*^9}, {
@@ -378,7 +378,8 @@ Cell[BoxData[
   3.684015042464724*^9, 3.684015042677374*^9}, {3.684017372308382*^9, 
   3.684017372952544*^9}, {3.684018419709014*^9, 3.6840184197964697`*^9}, {
   3.684018584167098*^9, 3.684018584237925*^9}, {3.684019334836526*^9, 
-  3.6840193350103903`*^9}, {3.684021455979472*^9, 3.684021456079331*^9}}],
+  3.6840193350103903`*^9}, {3.684021455979472*^9, 3.684021456079331*^9}, {
+  3.684102220647492*^9, 3.684102220873767*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -456,7 +457,20 @@ Cell[BoxData[
           AspectRatio->Automatic,
           ImageSize->{Automatic, 
             Dynamic[3.5 CurrentValue["FontCapHeight"]]},
-          PlotRange->{{0., 26.}, {0., 26.}}], GridBox[{
+          PlotRange->{{0., 26.}, {0., 26.}},
+          ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztlEsvA1EUx+81RT3WWFj007DyIRqRsBCCD9CwZWPbYuO50sajajptp9NO
+a/rSUEWjqh6NSOMRsf2797ZEEzS2WJw75/X75+TmzO2zTgwODFsnhvqtlt4x
+6+jgUP+4pWdkjKUkSgjp5mYh3Adz3w4Jh/tR+BUZHs8OaUcorJkQDmtN3KMI
+hVQK9/YWhU/ZZYCEVFyH7PXi4eWZtIpTwtLKMqZnZpC/LFZyFOXHewa6twWj
+6xriyWQNY59zwGazIVfIk7YKo6p+0R6J6kjsp+q1swF/VXtTFcqXrnFcLPBI
+2AdcxKX7MtK5U3N9pWAqgY2gKqjy8xPs83OYnJrCyfmZyOWuLrHgctZVMtUo
+GZnDBo6x9OLWJu6eHn4gxGB4IjpuynecloSQhGAygbOba6yyJfxGpbGqcnFb
+EiNxcwUCjVylgUesn13N29VV+r+TknBUOOe0mMNcncath/8l/rSESSwoXyVu
+ieOsCbMrqyy9GdLe07mrYvPXQi1VuTVZhsPphH3dyb4u9mu/P5KfYV21pehe
+5KvSUSaNgKp+LMm7HlHKHsSgsUm9ipd0cp5C8SkUfp8s6vzNz6QNZLMHpANG
+LEphGBHKH3fKi6yJvgKHVDNZ\
+\>"]], GridBox[{
            {
             RowBox[{
              TagBox["\<\"Class: \"\>",
@@ -494,7 +508,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
+               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$ = 1, 
                Devices`DeviceAPI`DeviceDump`indr$$ = 1}, 
@@ -639,7 +653,7 @@ Cell[BoxData[
                  False]}, Devices`DeviceAPI`DeviceDump`opacities$$ = {
                 Opacity[1], 
                 Opacity[0.2]}, Devices`DeviceAPI`DeviceDump`status$$ = {
-               "Connected (/dev/ttyUSB1)", "Not connected (/dev/ttyUSB1)"}, 
+               "Connected (/dev/ttyUSB0)", "Not connected (/dev/ttyUSB0)"}, 
                Devices`DeviceAPI`DeviceDump`d$$ = DeviceObject[{"Serial", 1}],
                 Devices`DeviceAPI`DeviceDump`ind$$, 
                Devices`DeviceAPI`DeviceDump`indr$$}, 
@@ -737,7 +751,7 @@ Cell[BoxData[
    3.684017373640205*^9, 3.684018420204913*^9, 3.6840185849089003`*^9, 
    3.684018859832554*^9, 3.6840190631459*^9, 3.6840193795814342`*^9, 
    3.6840196900129833`*^9, 3.6840214002151947`*^9, 3.684021456723171*^9, 
-   3.684021641168991*^9}]
+   3.684021641168991*^9, {3.684102229136057*^9, 3.684102242090577*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -781,9 +795,10 @@ Cell[BoxData[
          FromCharacterCode[
           DeviceReadBuffer[$CellContext`serial, "ReadTerminator" -> 10]], 
          ","]]]]], ImageSize -> Large], StandardForm],
-  ImageSizeCache->{1676., {103., 13.}}]], "Output",
+  ImageSizeCache->{1240., {23., 13.}}]], "Output",
  CellChangeTimes->{
-  3.68402149645855*^9, {3.684021622977436*^9, 3.684021649407065*^9}}]
+  3.68402149645855*^9, {3.684021622977436*^9, 3.684021649407065*^9}, {
+   3.684102229318159*^9, 3.68410224435002*^9}}]
 }, Open  ]]
 }, Open  ]],
 
@@ -821,35 +836,35 @@ Cell[708, 27, 104, 1, 65, "Section"],
 Cell[815, 30, 666, 18, 59, "Input"],
 Cell[CellGroupData[{
 Cell[1506, 52, 748, 15, 42, "Input"],
-Cell[2257, 69, 878, 15, 34, "Output"]
+Cell[2257, 69, 900, 15, 34, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3172, 89, 498, 12, 42, "Input"],
-Cell[3673, 103, 7016, 128, 228, "Output"]
+Cell[3194, 89, 498, 12, 42, "Input"],
+Cell[3695, 103, 7038, 128, 228, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10738, 237, 216, 8, 245, "Section"],
-Cell[10957, 247, 192, 3, 30, "Input"],
-Cell[11152, 252, 1271, 35, 87, "Input"],
-Cell[12426, 289, 1012, 26, 144, "Input"],
-Cell[13441, 317, 1157, 29, 190, "Input"]
+Cell[10782, 237, 216, 8, 245, "Section"],
+Cell[11001, 247, 192, 3, 30, "Input"],
+Cell[11196, 252, 1271, 35, 87, "Input"],
+Cell[12470, 289, 1012, 26, 144, "Input"],
+Cell[13485, 317, 1157, 29, 190, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[14635, 351, 126, 1, 65, "Section"],
-Cell[14764, 354, 159, 4, 32, "Input"],
+Cell[14679, 351, 126, 1, 65, "Section"],
+Cell[14808, 354, 159, 4, 32, "Input"],
 Cell[CellGroupData[{
-Cell[14948, 362, 1047, 18, 35, "Input"],
-Cell[15998, 382, 18153, 357, 65, "Output"]
+Cell[14992, 362, 1096, 19, 35, "Input"],
+Cell[16091, 383, 18901, 370, 65, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34188, 744, 1331, 26, 35, "Input"],
-Cell[35522, 772, 498, 13, 132, "Output"]
+Cell[35029, 758, 1331, 26, 35, "Input"],
+Cell[36363, 786, 546, 14, 52, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[36069, 791, 104, 1, 65, "Section"],
-Cell[36176, 794, 139, 2, 35, "Input"]
+Cell[36958, 806, 104, 1, 65, "Section"],
+Cell[37065, 809, 139, 2, 35, "Input"]
 }, Open  ]]
 }, Open  ]]
 }

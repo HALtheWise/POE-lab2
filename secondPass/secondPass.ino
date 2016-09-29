@@ -10,15 +10,15 @@
 // create servo object to control a servo
 // a maximum of eight servo objects can be created
 Servo servoLeft;  // left of the irSensor when system is facing forward
-int servoLeftPos = 0;
+int servoLeftPos = -20;
 Servo servoRight; // right of the irSensor when system is facing forward
-int servoRightPos = 0;
+int servoRightPos = -20;
 
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
 
 // time related
-unsigned long interval = 750;
+unsigned long interval = 50;
 unsigned long time;
 unsigned long prev_time = 0;
 
@@ -53,6 +53,9 @@ void loop()
     // package serial data
     printSerialData();
 
+    // get next positions
+    gridPos();
+
     // move servos to next position
     moveNextPos();
   }
@@ -82,9 +85,7 @@ void gridPos()
 {
   // grid position gives sequential positions in a grid like sweep a pattern
   static int gridSize = 20; // length of side of square grid
-  static int servoLeftPos = -gridSize;
   static int incrementDirection = 1;
-  static int servoRightPos = -gridSize;
 
   if (servoLeftPos >= -gridSize && servoLeftPos <= gridSize)
   {
@@ -93,7 +94,7 @@ void gridPos()
   }
   else
   {
-    horiDirection *= -1;
+    incrementDirection *= -1;
     servoLeftPos += incrementDirection;
     servoRightPos += 1;
   }
