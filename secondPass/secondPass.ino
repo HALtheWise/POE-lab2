@@ -98,7 +98,7 @@ void gridPos()
 {
   // grid position gives sequential positions in a grid like sweep a pattern
   static int gridSize = 40; // length of side of square grid
-  static int incrementDirection = 1;
+  static int incrementDirection = 5;
 
   static int pan = -30;
   static int tilt = -30;
