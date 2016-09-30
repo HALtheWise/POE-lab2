@@ -18,10 +18,11 @@ int irValue;
 
 void setup() 
 { 
-  Serial.begin(115200);
-  tiltServo.attach(8);  // attaches the servo on pin 9 to the servo object 
-  panServo.attach(9);  // attaches the servo on pin 9 to the servo object 
-  tiltServo.write(75);
+  Serial.begin(9600);
+  tiltServo.attach(31);  // attaches the servo on pin 9 to the servo object 
+  panServo.attach(33);  // attaches the servo on pin 9 to the servo object 
+  tiltServo.write(95);
+  panServo.write(85);
 } 
  
  
