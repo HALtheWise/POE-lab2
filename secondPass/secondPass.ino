@@ -17,14 +17,16 @@ int servoRightPos = -30;
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
 
+// create modes of our system. We start mode = MODE_WAITING_START until
+// mathematica sends a signal that make mode = MODE_SCANNING.
 const byte MODE_WAITING_START = 0;
 const byte MODE_SCANNING = 1;
 const byte MODE_DONE = 2;
 
-byte mode = MODE_SCANNING;
+byte mode = MODE_WAITING_START;
 
 // time related
-unsigned long interval = 400;
+unsigned long interval = 200;
 unsigned long time;
 unsigned long prev_time = 0;
 
@@ -43,6 +45,11 @@ void setup()
 
 void loop()
 {
+  if (Serial.available() > 0) {
+        // read the incoming byte:
+        mode = Serial.read();
+      }
+
   // put your main code here, to run repeatedly:
 
   // begin interval time state
@@ -108,7 +115,7 @@ void gridPos()
     tilt += abs(incrementDirection);
   }
 
-  if (tilt < -gridSize)
+  if (tilt > gridSize)
   {
     mode = MODE_DONE;
   }
