@@ -17,6 +17,12 @@ int servoRightPos = -30;
 int irSensor = 0; // ir sensor pin
 int irValue = 0;
 
+const byte MODE_WAITING_START = 0;
+const byte MODE_SCANNING = 1;
+const byte MODE_DONE = 2;
+
+byte mode = MODE_SCANNING;
+
 // time related
 unsigned long interval = 400;
 unsigned long time;
@@ -42,7 +48,7 @@ void loop()
   // begin interval time state
   time = millis();
 
-  if (time - prev_time > interval)
+  if (time - prev_time > interval && mode == MODE_SCANNING)
   {
     // start next timer
     prev_time = time;
@@ -85,19 +91,30 @@ void gridPos()
 {
   // grid position gives sequential positions in a grid like sweep a pattern
   static int gridSize = 30; // length of side of square grid
-  static int incrementDirection = 1;
+  static int incrementDirection = 5;
 
-  if (servoLeftPos >= -gridSize && servoLeftPos <= gridSize)
+  static int pan = -30;
+  static int tilt = -30;
+
+  if (pan >= -gridSize && pan <= gridSize)
   {
     // general behavior is to move servoLeftPos
-    servoLeftPos += incrementDirection;
+    pan += incrementDirection;
   }
   else
   {
     incrementDirection *= -1;
-    servoLeftPos += incrementDirection;
-    servoRightPos += 1;
+    pan += incrementDirection;
+    tilt += abs(incrementDirection);
   }
+
+  if (tilt < -gridSize)
+  {
+    mode = MODE_DONE;
+  }
+
+  servoLeftPos = tilt+pan;
+  servoRightPos = tilt-pan;
 }
 
 
