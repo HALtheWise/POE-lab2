@@ -26,7 +26,7 @@ const byte MODE_DONE = 2;
 byte mode = MODE_WAITING_START;
 
 // time related
-unsigned long interval = 200;
+unsigned long interval = 150;
 unsigned long time;
 unsigned long prev_time = 0;
 
@@ -97,8 +97,8 @@ void irSensorRead()
 void gridPos()
 {
   // grid position gives sequential positions in a grid like sweep a pattern
-  static int gridSize = 30; // length of side of square grid
-  static int incrementDirection = 5;
+  static int gridSize = 40; // length of side of square grid
+  static int incrementDirection = 1;
 
   static int pan = -30;
   static int tilt = -30;
